@@ -1,0 +1,88 @@
+/* Some CSS Setup - nothing to do with flexbox */
+
+
+
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  /* *determines style is applied to the whole page  */
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  }
+  /* controls rendering options for <a href links on the pages the css is linked too */
+  a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  
+  a:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  /* wraps around flex container without it theres no padding around the container  */
+  .wrapper {
+   max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  /* Flex Container */
+  .flex-nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+  }
+  /* The flex-grow CSS property sets the flex grow factor of a flex item's main size */
+  .flex-nav ul li {
+    flex-grow: 1;
+  }
+  /* .round-border-centered {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .footers{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: aqua;
+  }
+  .footers p {
+      flex-grow: 1;
+  }
+  /* In CSS, use the @media at-rule to conditionally apply part of a style sheet based on the result of a media query. Use @import to conditionally apply an entire style sheet. */
+  @media all and (max-width: 1000px) {
+    .flex-nav ul li {
+      width: 100%;
+  }
+  }
+  @media all and (max-width: 500px) {
+    .flex-nav ul li {
+      width: 50%;
+  }
+  }
+  /* actually implementing the above code was incredibly difficult  */
